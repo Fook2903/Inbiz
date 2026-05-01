@@ -1,13 +1,13 @@
 # 📦 Inbiz Repository
 
-Đây là repository chính thức của **Team Inbiz** chứa toàn bộ mã nguồn, dữ liệu đã làm sạch, notebooks phân tích, dashboard Power BI và kết quả dự đoán (submissions).
+Đây là repository chính thức của **Team Inbiz** chứa toàn bộ mã nguồn, dữ liệu đã làm sạch, notebooks phân tích, dashboard Power BI và kết quả dự đoán.
 Mọi nội dung trong này đều bám sát cấu trúc của báo cáo (định dạng NeurIPS) đính kèm.
 
 ---
 
-## 📁 1. Cấu Trúc Thư Mục (Project Structure)
+## 📁 1. Cấu Trúc Thư Mục
 
-> ⚠️ Giữ nguyên cấu trúc để tránh lỗi đường dẫn
+> Giữ nguyên cấu trúc để tránh lỗi đường dẫn
 
 ```text
 Inbiz-main/
@@ -49,20 +49,19 @@ Inbiz-main/
 
 ---
 
-## 💾 2. Dữ Liệu Đầu Vào (Data)
+## 💾 2. Data
 
 Toàn bộ dữ liệu trong `data/` đã được làm sạch.
 
 ### 🔑 Dữ liệu cốt lõi:
 
-* `sales.csv`: Doanh thu theo thời gian (target)
+* `sales.csv`: Doanh thu theo thời gian
 * `web_traffic.csv`: Hành vi người dùng
 * `sample_submission.csv`: Format output
 
 ---
 
-## 📊 3. Phân Tích & Trực Quan Hóa (Power BI)
-
+## 📊 3. Phân Tích & Trực Quan Hóa
 ### 3.1 Data Relationships
 
 | From        | Column        | Relation | To        | Column      | Status |
@@ -152,11 +151,11 @@ SWITCH(TRUE(),
 
 ## 🤖 4. Mô Hình Dự Báo
 
-### 🎯 Mục tiêu
+### Mục tiêu
 
 Dự báo doanh thu từ dữ liệu lịch sử + hành vi user
 
-### ⚙️ Pipeline
+### Pipeline
 
 * Baseline Model
 * Pipeline Model
@@ -164,7 +163,7 @@ Dự báo doanh thu từ dữ liệu lịch sử + hành vi user
 
 ---
 
-## ⚙️ 5. How to Run
+## 5. How to Run
 
 ```bash
 pip install -r requirements.txt
@@ -183,7 +182,7 @@ python advanced_model.py
 
 * baseline.csv
 * pipeline_model.csv
-* advanced_model.csv ✅
+* advanced_model.csv 
 
 ### 📊 Plots
 
@@ -191,7 +190,5 @@ python advanced_model.py
 * shap_summary.png
 
 ---
-
-## 👥 Team
 
 **Team Inbiz**
