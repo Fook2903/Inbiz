@@ -3,7 +3,6 @@
 Đây là repository chính thức của **Team Inbiz** chứa toàn bộ mã nguồn, dữ liệu đã làm sạch, notebooks phân tích, dashboard Power BI và kết quả dự đoán.
 Mọi nội dung trong này đều bám sát cấu trúc của báo cáo (định dạng NeurIPS) đính kèm.
 
----
 
 ## 1. Cấu Trúc Thư Mục
 
@@ -47,8 +46,6 @@ Inbiz-main/
         └── advanced_model.csv
 ```
 
----
-
 ## 2. Data
 
 Toàn bộ dữ liệu trong `data/` đã được làm sạch.
@@ -59,7 +56,6 @@ Toàn bộ dữ liệu trong `data/` đã được làm sạch.
 * `web_traffic.csv`: Hành vi người dùng
 * `sample_submission.csv`: Format output
 
----
 
 ## 3. Phân Tích & Trực Quan Hóa
 ### 3.1 Data Relationships
