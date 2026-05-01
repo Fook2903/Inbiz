@@ -6,7 +6,7 @@ Mọi nội dung trong này đều bám sát cấu trúc của báo cáo (địn
 
 ## 1. Cấu Trúc Thư Mục
 
-> Giữ nguyên cấu trúc để tránh lỗi đường dẫn
+> Cần giữ nguyên cấu trúc để tránh lỗi đường dẫn
 
 ```text
 Inbiz-main/
@@ -95,7 +95,7 @@ RETURN
         "Month Name", FORMAT([Date], "MMMM"),
         "Quarter", "Q" & FORMAT([Date], "Q"),
         "Month-Year", FORMAT([Date], "MMM yyyy"),
-        "YearMonth_Sort", FORMAT([Date], "yyyyMM") -- Dùng để sắp xếp cột Month-Year)
+        "YearMonth_Sort", FORMAT([Date], "yyyyMM") 
 
 -- 2. Các Measures Tính Toán Chỉ Số Kinh Doanh & Vận Hành
 Avg Delivery Days = AVERAGE('shipments'[Wait Days])
@@ -116,14 +116,12 @@ Return Rate = DIVIDE(COUNTROWS('returns'), COUNTROWS('order_items'), 0)
 SD_Delivery = STDEV.S(shipments[Wait Days])
 
 Total COGS Calculated = 
-SUMX(
-    'order_items', 
+SUMX('order_items', 
     'order_items'[quantity] * RELATED('products'[cogs]))
 
 Total Revenue = 
-SUMX(
-    'order_items', 
-    'order_items'[quantity] * 'order_items'[unit_price])
+SUMX('order_items', 
+'order_items'[quantity]*'order_items'[unit_price])
 
 Total_Return_Qty = SUM(returns[return_quantity])
 
@@ -145,7 +143,7 @@ SWITCH(TRUE(),
 
 ### Mục tiêu
 
-Dự báo doanh thu từ dữ liệu lịch sử + hành vi user
+Dự báo doanh thu từ dữ liệu lịch sử + hành vi khách hàng
 
 ### Pipeline
 
@@ -155,7 +153,7 @@ Dự báo doanh thu từ dữ liệu lịch sử + hành vi user
 
 ---
 
-## 5. How to Run
+## 5. Cách chạy đoạn code
 
 ```bash
 pip install -r requirements.txt
