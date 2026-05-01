@@ -1,11 +1,11 @@
-# 📦 Inbiz Repository
+# Inbiz Repository
 
 Đây là repository chính thức của **Team Inbiz** chứa toàn bộ mã nguồn, dữ liệu đã làm sạch, notebooks phân tích, dashboard Power BI và kết quả dự đoán.
 Mọi nội dung trong này đều bám sát cấu trúc của báo cáo (định dạng NeurIPS) đính kèm.
 
 ---
 
-## 📁 1. Cấu Trúc Thư Mục
+## 1. Cấu Trúc Thư Mục
 
 > Giữ nguyên cấu trúc để tránh lỗi đường dẫn
 
@@ -49,11 +49,11 @@ Inbiz-main/
 
 ---
 
-## 💾 2. Data
+## 2. Data
 
 Toàn bộ dữ liệu trong `data/` đã được làm sạch.
 
-### 🔑 Dữ liệu cốt lõi:
+### Dữ liệu cốt lõi:
 
 * `sales.csv`: Doanh thu theo thời gian
 * `web_traffic.csv`: Hành vi người dùng
@@ -61,7 +61,7 @@ Toàn bộ dữ liệu trong `data/` đã được làm sạch.
 
 ---
 
-## 📊 3. Phân Tích & Trực Quan Hóa
+## 3. Phân Tích & Trực Quan Hóa
 ### 3.1 Data Relationships
 
 | From        | Column        | Relation | To        | Column      | Status |
@@ -99,8 +99,7 @@ RETURN
         "Month Name", FORMAT([Date], "MMMM"),
         "Quarter", "Q" & FORMAT([Date], "Q"),
         "Month-Year", FORMAT([Date], "MMM yyyy"),
-        "YearMonth_Sort", FORMAT([Date], "yyyyMM") -- Dùng để sắp xếp cột Month-Year
-    )
+        "YearMonth_Sort", FORMAT([Date], "yyyyMM") -- Dùng để sắp xếp cột Month-Year)
 
 -- 2. Các Measures Tính Toán Chỉ Số Kinh Doanh & Vận Hành
 Avg Delivery Days = AVERAGE('shipments'[Wait Days])
@@ -123,14 +122,12 @@ SD_Delivery = STDEV.S(shipments[Wait Days])
 Total COGS Calculated = 
 SUMX(
     'order_items', 
-    'order_items'[quantity] * RELATED('products'[cogs])
-)
+    'order_items'[quantity] * RELATED('products'[cogs]))
 
 Total Revenue = 
 SUMX(
     'order_items', 
-    'order_items'[quantity] * 'order_items'[unit_price]
-)
+    'order_items'[quantity] * 'order_items'[unit_price])
 
 Total_Return_Qty = SUM(returns[return_quantity])
 
@@ -143,13 +140,12 @@ SWITCH(TRUE(),
     LeadTime <= 2, "1-2 Ngày", 
     LeadTime <= 4, "3-4 Ngày", 
     LeadTime <= 7, "5-7 Ngày (Quá tải)", 
-    "> 7 Ngày"
-)
+    "> 7 Ngày")
 ```
 
 ---
 
-## 🤖 4. Mô Hình Dự Báo
+## 4. Mô Hình Dự Báo
 
 ### Mục tiêu
 
@@ -176,15 +172,15 @@ python advanced_model.py
 
 ---
 
-## 🎯 6. Output
+## 6. Output
 
-### 📂 Submissions
+### Submissions
 
 * baseline.csv
 * pipeline_model.csv
 * advanced_model.csv 
 
-### 📊 Plots
+### Plots
 
 * feature_importance.png
 * shap_summary.png
