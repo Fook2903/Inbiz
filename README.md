@@ -97,7 +97,7 @@ RETURN
         "Month-Year", FORMAT([Date], "MMM yyyy"),
         "YearMonth_Sort", FORMAT([Date], "yyyyMM") 
 
--- 2. Các Measures Tính Toán Chỉ Số Kinh Doanh & Vận Hành
+-- 2. Tính toán chỉ số kinh doanh & vận hành
 Avg Delivery Days = AVERAGE('shipments'[Wait Days])
 
 Avg_Rating = AVERAGE(reviews[rating])
