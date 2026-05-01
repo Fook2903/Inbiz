@@ -5,16 +5,7 @@ Mọi nội dung trong này đều bám sát cấu trúc của báo cáo (địn
 
 ---
 
-## 🌟 1. Tính Năng Nổi Bật (Key Features)
-
-* ⚡ **Pipeline Tự Động:** Quy trình xử lý dữ liệu và huấn luyện mô hình được đóng gói khép kín.
-* 📊 **Trực Quan Hóa Chuyên Sâu:** Bao gồm Feature Importance, SHAP và Dashboard Power BI.
-* 🛠️ **Tính Tái Lập:** Cố định Random Seed đảm bảo kết quả đồng nhất.
-* 📂 **Cấu Trúc Sạch:** Dễ theo dõi, mở rộng và bảo trì.
-
----
-
-## 📁 2. Cấu Trúc Thư Mục (Project Structure)
+## 📁 1. Cấu Trúc Thư Mục (Project Structure)
 
 > ⚠️ Giữ nguyên cấu trúc để tránh lỗi đường dẫn
 
@@ -58,7 +49,7 @@ Inbiz-main/
 
 ---
 
-## 💾 3. Dữ Liệu Đầu Vào (Data)
+## 💾 2. Dữ Liệu Đầu Vào (Data)
 
 Toàn bộ dữ liệu trong `data/` đã được làm sạch.
 
@@ -70,9 +61,9 @@ Toàn bộ dữ liệu trong `data/` đã được làm sạch.
 
 ---
 
-## 📊 4. Phân Tích & Trực Quan Hóa (Power BI)
+## 📊 3. Phân Tích & Trực Quan Hóa (Power BI)
 
-### 4.1 Data Relationships
+### 3.1 Data Relationships
 
 | From        | Column        | Relation | To        | Column      | Status |
 | ----------- | ------------- | -------- | --------- | ----------- | ------ |
@@ -95,7 +86,7 @@ Toàn bộ dữ liệu trong `data/` đã được làm sạch.
 
 ---
 
-### 4.2 DAX Measures
+### 3.2 DAX Measures
 
 ```DAX
 -- 1. Tạo bảng Dim_Date (Theo giai đoạn sales_train)
@@ -159,7 +150,7 @@ SWITCH(TRUE(),
 
 ---
 
-## 🤖 5. Mô Hình Dự Báo
+## 🤖 4. Mô Hình Dự Báo
 
 ### 🎯 Mục tiêu
 
@@ -173,7 +164,7 @@ Dự báo doanh thu từ dữ liệu lịch sử + hành vi user
 
 ---
 
-## ⚙️ 6. How to Run
+## ⚙️ 5. How to Run
 
 ```bash
 pip install -r requirements.txt
@@ -186,7 +177,7 @@ python advanced_model.py
 
 ---
 
-## 🎯 7. Output
+## 🎯 6. Output
 
 ### 📂 Submissions
 
